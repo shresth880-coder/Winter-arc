@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Winter Arc — Daily Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orb orb1"></div><div class="bg-orb orb2"></div>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="eyebrow">WINTER ARC • <span id="yearLabel"></span></div>
+        <h1>Build. Track. <span>Repeat.</span></h1>
+        <p class="sub">Your daily discipline dashboard.</p>
+      </div>
+      <button class="month-btn" id="todayBtn">Today</button>
+    </header>
+
+    <section class="hero-grid">
+      <div class="card progress-card">
+        <div class="card-head"><span>Monthly Progress</span><strong id="monthName"></strong></div>
+        <div class="progress-wrap">
+          <div class="ring" id="ring"><div><b id="monthPct">0%</b><small>complete</small></div></div>
+          <div class="progress-copy">
+            <h2 id="completedDays">0 / 0</h2><p>perfect days</p>
+            <div class="mini-bar"><i id="monthBar"></i></div>
+            <span id="monthMessage">Start your arc today.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card streak-card">
+        <div class="card-head"><span>Current Streak</span><span class="fire">🔥</span></div>
+        <div class="big-number" id="streak">0</div>
+        <p>consecutive perfect days</p>
+        <div class="streak-meta">
+          <div><b id="bestStreak">0</b><span>Best streak</span></div>
+          <div><b id="totalChecks">0</b><span>Goals done</span></div>
+        </div>
+      </div>
+
+      <div class="card score-card">
+        <div class="card-head"><span>Arc Score</span><span class="badge">LIVE</span></div>
+        <div class="score" id="score">0</div>
+        <p>overall completion rate</p>
+        <div class="score-line"><i id="scoreBar"></i></div>
+      </div>
+    </section>
+
+    <section class="layout">
+      <div class="left">
+        <div class="section-title">
+          <div><h2>Daily Goals</h2><p id="selectedDateLabel"></p></div>
+          <button class="ghost" id="resetDay">Reset day</button>
+        </div>
+        <div class="goals card" id="goals"></div>
+
+        <div class="section-title calendar-title">
+          <div><h2>Monthly Overview</h2><p>Tap any day to view or edit it.</p></div>
+          <div class="month-nav">
+            <button class="icon-btn" id="prevMonth">‹</button>
+            <button class="icon-btn" id="nextMonth">›</button>
+          </div>
+        </div>
+        <div class="calendar card" id="calendar"></div>
+      </div>
+
+      <aside class="right">
+        <div class="section-title"><div><h2>Goal Breakdown</h2><p>This month</p></div></div>
+        <div class="card breakdown" id="breakdown"></div>
+
+        <div class="section-title"><div><h2>Monthly Data</h2><p>Everything at a glance</p></div></div>
+        <div class="card stats">
+          <div><span>Days tracked</span><b id="daysTracked">0</b></div>
+          <div><span>Perfect days</span><b id="perfectDays">0</b></div>
+          <div><span>Missed days</span><b id="missedDays">0</b></div>
+          <div><span>Avg. daily goals</span><b id="avgGoals">0%</b></div>
+        </div>
+        <div class="card quote">
+          <span>WINTER ARC RULE</span>
+          <p>“You don't need a perfect month. You need to keep showing up.”</p>
+        </div>
+      </aside>
+    </section>
+
+    <footer>Data is saved automatically in your browser • <button id="clearAll">Clear all data</button></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
